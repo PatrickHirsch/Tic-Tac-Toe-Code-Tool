@@ -1,0 +1,100 @@
+@font-face
+{	font-family:'ACME';
+    src:url('font.woff') format('woff');
+}
+
+body
+{	background-color:	#377EC7;
+	font-family: 		Arial, sans-serif;
+
+	display:			flex;
+	flex-direction:		column;
+	justify-content:	center;
+	align-items:		center;
+	height:				100vh;
+	margin:				0;
+}
+
+.keyboard
+{	display:			flex;
+	justify-content:	space-evenly;
+	gap: 				20px;
+}
+
+.keypad
+{	border-collapse:	collapse;
+	border:				5px solid #215196;
+}
+.key
+{	width:				100px;
+	height:				100px;
+	background-color:	#123262;
+    border-left:		5px solid #5CC9FA;
+    border-top:			5px solid #5CC9FA;
+    
+    color:				#FFF;	
+	font-size:			3em;
+	font-weight:		bold;
+	text-align:			center;
+	vertical-align:		middle;
+}
+.key:hover
+{	background-color:	#215196;
+}
+.key:first-child
+{	border-left:		none;
+}
+tr:first-child .key
+{    border-top: 		none;
+}
+
+
+
+
+#notepad,#codepad
+{	color:				#FFF;
+	background-color:	#123262;
+	font-size:			1.5em;
+	font-weight:		bold;
+	text-align:			center;
+	
+	width:				90%;
+	border-radius:		25px;
+	padding:			15px;
+	margin:				50px 20px;
+	
+	border-top:			2px solid #215196;
+	border-left:		2px solid #215196;
+	border-right:		2px solid #5BC7F8;
+	border-bottom:		2px solid #5BC7F8;
+}
+#notepad
+{	font-family:'ACME',sans-serif;
+}
+
+.boxedChar
+{	display:			inline-block;
+	padding:			3px;
+	margin:				3px;
+	width:				18px;
+	height:				18px;
+	text-align:			center;
+	line-height:		20px;
+}
+
+.A,.B,.C,	.J,.K,.L,	.S,.T,.U, 
+.D,.E,.F,	.M,.N,.O,	.V,.W,.X
+{	border-bottom:	2px solid #FFF;
+}
+.D,.E,.F,	.M,.N,.O,	.V,.W,.X,
+.G,.H,.I,	.P,.Q,.R,	.Y,.Z
+{	border-top:		2px solid #FFF;
+}
+.A,.D,.G,	.J,.M,.P,	.S,.V,.Y,
+.B,.E,.H,	.K,.N,.Q,	.T,.W,.Z
+{	border-right:	2px solid #FFF;
+}
+.B,.E,.H,	.K,.N,.Q,	.T,.W,.Z,
+.C,.F,.I,	.L,.O,.R,	.U,.X
+{	border-left:	2px solid #FFF;
+}

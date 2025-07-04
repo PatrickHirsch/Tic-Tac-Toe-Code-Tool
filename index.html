@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Code Decoder</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+    <div id="notepad">&nbsp;</div>
+    <div class="keyboard">
+		<table class="keypad">
+			<tr>
+				<td class="key" onclick="typeChar('A');"></td>
+				<td class="key" onclick="typeChar('B');"></td>
+				<td class="key" onclick="typeChar('C');"></td>
+			</tr>
+			<tr>
+				<td class="key" onclick="typeChar('D');"></td>
+				<td class="key" onclick="typeChar('E');"></td>
+				<td class="key" onclick="typeChar('F');"></td>
+			</tr>
+			<tr>
+				<td class="key" onclick="typeChar('G');"></td>
+				<td class="key" onclick="typeChar('H');"></td>
+				<td class="key" onclick="typeChar('I');"></td>
+			</tr>
+		</table>
+		<table class="keypad">
+			<tr>
+				<td class="key" onclick="typeChar('J');">X</td>
+				<td class="key" onclick="typeChar('K');">X</td>
+				<td class="key" onclick="typeChar('L');">X</td>
+			</tr>               
+			<tr>                
+				<td class="key" onclick="typeChar('M');">X</td>
+				<td class="key" onclick="typeChar('N');">X</td>
+				<td class="key" onclick="typeChar('O');">X</td>
+			</tr>               
+			<tr>                
+				<td class="key" onclick="typeChar('P');">X</td>
+				<td class="key" onclick="typeChar('Q');">X</td>
+				<td class="key" onclick="typeChar('R');">X</td>
+			</tr>
+		</table>
+		<table class="keypad">
+			<tr>
+				<td class="key" onclick="typeChar('S');">O</td>
+				<td class="key" onclick="typeChar('T');">O</td>
+				<td class="key" onclick="typeChar('U');">O</td>
+			</tr>               
+			<tr>                
+				<td class="key" onclick="typeChar('V');">O</td>
+				<td class="key" onclick="typeChar('W');">O</td>
+				<td class="key" onclick="typeChar('X');">O</td>
+			</tr>               
+			<tr>                
+				<td class="key" onclick="typeChar('Y');">O</td>
+				<td class="key" onclick="typeChar('Z');">O</td>
+				<td class="key" onclick="clearNotepad();">⌫</td>
+			</tr>
+		</table>
+	</div>
+    <div id="codepad">&nbsp;</div>
+</body>
+</html>
+
+<script>
+var theString="TIC TAC TOE CODE DECODER";
+prefill();
+</script>
