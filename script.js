@@ -1,13 +1,13 @@
 // Prefill
 function prefill()
 {	var msg=new URLSearchParams(window.location.search).get('message');
-	if(msg!=null) theString=msg.toUpperCase().replace(/[^ A-Z]/g,"");
+	if(msg!=null) theString=msg.toUpperCase().replace(/[^ A-ZÄÖÜ]/g,"");
 	ticTacToer();
 }
 
 // Recognize keypresses and send appropriate typeChar() command to type the character
 document.addEventListener('keydown',function(event)
-{	if(/^[A-Za-z]$/.test(event.key))	typeChar(event.key);
+{	if(/^[A-ZÄÖÜ]$/i.test(event.key))	typeChar(event.key);
 	else if(event.code==='Space')		typeChar(' ');
 	else if(event.code==='Backspace')	typeChar();
 });
@@ -54,13 +54,14 @@ function ticTacToer()
 				codepad+="<span class='boxedChar'> </span>";
 			}
 			// Otherwise, if char is a capital letter, append to each text box
-			else if(/^[A-Z]$/.test(ch))
+			else if(/^[A-ZÄÖÜ]$/.test(ch))
 			{	notepad+="<span>"+ch+"</span>";
 				codepad+="<span class='boxedChar "+ch+"'>";
 			
 				if(/^[A-I]$/.test(ch))		codepad+="&nbsp;";
 				else if(/^[J-R]$/.test(ch))	codepad+="X";
 				else if(/^[S-Z]$/.test(ch))	codepad+="O";
+				else if(/^[ÄÖÜ]$/.test(ch))	codepad+="&bullet;";
 				
 				codepad+="</span>";
 			}

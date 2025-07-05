@@ -82,19 +82,19 @@ tr:first-child .key
 	line-height:		20px;
 }
 
-.A,.B,.C,	.J,.K,.L,	.S,.T,.U, 
+.A,.B,.C,	.J,.K,.L,	.S,.T,.U,	.Ä,.Ö,.Ü,
 .D,.E,.F,	.M,.N,.O,	.V,.W,.X
 {	border-bottom:	2px solid #FFF;
 }
 .D,.E,.F,	.M,.N,.O,	.V,.W,.X,
-.G,.H,.I,	.P,.Q,.R,	.Y,.Z
+.G,.H,.I,	.P,.Q,.R,	.Y,.Z,.AA
 {	border-top:		2px solid #FFF;
 }
-.A,.D,.G,	.J,.M,.P,	.S,.V,.Y,
+.A,.D,.G,	.J,.M,.P,	.S,.V,.Y,	.Ä,.Ö,
 .B,.E,.H,	.K,.N,.Q,	.T,.W,.Z
 {	border-right:	2px solid #FFF;
 }
-.B,.E,.H,	.K,.N,.Q,	.T,.W,.Z,
-.C,.F,.I,	.L,.O,.R,	.U,.X
+.B,.E,.H,	.K,.N,.Q,	.T,.W,.Z,	.Ö,.Ü,
+.C,.F,.I,	.L,.O,.R,	.U,.X,.AA
 {	border-left:	2px solid #FFF;
 }
