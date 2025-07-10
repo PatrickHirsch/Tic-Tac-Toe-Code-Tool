@@ -8,8 +8,7 @@
 	<script src="script.js"></script>
 </head>
 <body>
-    <div id="notepad">&nbsp;</div>
-    <div class="keyboard">
+    <div id="notepad">&nbsp;</div><div class="keyboard">
 		<table class="keypad">
 			<tr>
 				<td class="key" onclick="typeChar('A');"></td>
@@ -58,7 +57,7 @@
 			<tr>                
 				<td class="key" onclick="typeChar('Y');">O</td>
 				<td class="key" onclick="typeChar('Z');">O</td>
-				<td class="key" onclick="typeChar('𝐴');">O</td>
+				<td class="key" onclick="typeChar('@');">O</td>
 			</tr>
 		</table>
 		<table class="keypad">
@@ -68,15 +67,15 @@
 				<td class="key" onclick="typeChar('Ü');">&bullet;</td>
 			</tr>               
 			<tr>                
-				<td class="key" onclick="typeChar('');"></td>
-				<td class="key" onclick="typeChar('');"></td>
-				<td class="key" onclick="typeChar('');"></td>
-			</tr>               
-			<tr>                
 				<td class="key" onclick="clearNotepad();">	<small>␡</small></td>
 				<td class="key" onclick="typeChar(' ');">	<small>␠</small></td>
 				<td class="key" onclick="typeChar();">		<small>␈</small></td>
 			</tr>
+			<tr>                
+				<td class="key" onclick="copyToClipboard();">📝</td>
+				<td class="key" onclick="getTextFromClipboard();">📋</td>
+				<td class="key" onclick="getTextFromAlert();">⌨️</td>
+			</tr>               
 		</table>
 	</div>
     <div id="codepad">&nbsp;</div>

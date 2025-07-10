@@ -54,13 +54,13 @@ function ticTacToer()
 				codepad+="<span class='boxedChar'> </span>";
 			}
 			// Otherwise, if char is a capital letter, append to each text box
-			else if(/^[A-ZÄÖÜ]$/.test(ch))
+			else if(/^[A-ZÄÖÜ\@]$/.test(ch))
 			{	notepad+="<span>"+ch+"</span>";
 				codepad+="<span class='boxedChar "+ch+"'>";
 			
 				if(/^[A-I]$/.test(ch))		codepad+="&nbsp;";
 				else if(/^[J-R]$/.test(ch))	codepad+="X";
-				else if(/^[S-Z]$/.test(ch))	codepad+="O";
+				else if(/^[S-Z\@]$/.test(ch))	codepad+="O";
 				else if(/^[ÄÖÜ]$/.test(ch))	codepad+="&bullet;";
 				
 				codepad+="</span>";
@@ -71,4 +71,25 @@ function ticTacToer()
 	// Override the textboxes with their newly formed innerHTML
 	document.getElementById('notepad').innerHTML=notepad;
 	document.getElementById('codepad').innerHTML=codepad;
+}
+
+async function copyToClipboard()
+{	await navigator.clipboard.writeText(theString);
+}
+
+function getTextFromAlert()
+{	let newString=window.prompt("");
+	theString=newString.toUpperCase().replace(/[^ A-ZÄÖÜ]/g,"");
+	ticTacToer();
+}
+
+async function getTextFromClipboard()
+{	try
+	{	const newString=await navigator.clipboard.readText();
+		theString=newString.toUpperCase().replace(/[^ A-ZÄÖÜ]/g,"");
+		ticTacToer();
+	}
+	catch (err)
+	{	console.error("Failed to read clipboard: ",err);
+	}
 }
